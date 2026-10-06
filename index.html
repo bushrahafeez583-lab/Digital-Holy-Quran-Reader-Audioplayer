@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Digital Holy Quran Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js"
+        data-auto-replace-svg="true"
+        defer
+    ></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Digital Holy Quran Reader
+        </h1>
+        <p class="subtitle">
+            Read and listen to the Holy Quran
+        </p>
+        <div class="controls">
+            <label for="surah-select">
+                Select Surah
+            </label>
+            <select id="surah-select">
+                <option value="">
+                    Loading Surahs...
+                </option>
+            </select>
+        </div>
+        <div id="loading">
+            Loading Quran...
+        </div>
+        <div id="message"></div>
+        <div id="surah-info" class="surah-info">
+            <h2 id="surah-name">
+                Select a Surah
+            </h2>
+            <p id="surah-details"></p>
+        </div>
+        <div id="ayah-container"></div>
+        <div class="player">
+            <div class="player-title">
+                <i class="fa-solid fa-headphones"></i>
+                Audio Player
+            </div>
+            <p id="current-ayah">
+                Ayah 1
+            </p>
+            <audio id="audio-player"></audio>
+            <div class="player-buttons">
+                <button id="previous-btn">
+                    <i class="fa-solid fa-backward"></i>
+                    Previous
+                </button>
+                <button id="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                    Play
+                </button>
+                <button id="next-btn">
+                    Next
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+        </div>
+        <div class="reading-options">
+            <label>
+                <input
+                    type="checkbox"
+                    id="continuous-play"
+                    checked
+                >
+                Continuous verse playback
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
